@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            HTml CRUD with Pure javascript
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <table>
+            <td>
+                <form> <!--Form for CRUD operations-->
+                    <div>
+                        <label>Full Name</label>
+                        <input type="text" name="fullname">
+                    </div>
+                    <div>   
+                        <label>EMP code</label>
+                        <input type="text" name="empcode">
+                    </div>
+                    <div>
+                        <label>Salary</label>
+                        <input type="text" name="salary">
+                    </div>
+                    <div>
+                        <label>City</label>
+                        <input type="text" name="city">
+                    </div>
+                    <div class="formactionbuttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeelist"> <!--Table to list all records-->
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>EMP code</th>
+                            <th>Salary</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                </table>
+            </td>
+        </table>
+        <script src="script.js"></script>
+    </body>
+</html>
