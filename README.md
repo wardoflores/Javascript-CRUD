@@ -6,6 +6,8 @@ Repository for Javascript Projects.
 
 ## List of Projects
 
-### Completed
+### CRUD website
+
+- <https://www.youtube.com/watch?v=-rNQeJi3Wp4&t=207s>
 
 ### Incomplete
