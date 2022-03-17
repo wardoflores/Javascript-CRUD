@@ -9,22 +9,22 @@
     <body>
         <table>
             <td>
-                <form> <!--Form for CRUD operations-->
+                <form onsubmit="event.preventDefault();onformsubmit();" autocomplete="off"> <!--Form for CRUD operations-->
                     <div>
-                        <label>Full Name</label>
-                        <input type="text" name="fullname">
+                        <label>Full Name*</label><label class="validation-error hide" id="fullnamevalidationerror">This field is required.</label>
+                        <input type="text" name="fullname" id="fullname">
                     </div>
                     <div>   
                         <label>EMP code</label>
-                        <input type="text" name="empcode">
+                        <input type="text" name="empcode" id="empcode">
                     </div>
                     <div>
                         <label>Salary</label>
-                        <input type="text" name="salary">
+                        <input type="text" name="salary" id="salary">
                     </div>
                     <div>
                         <label>City</label>
-                        <input type="text" name="city">
+                        <input type="text" name="city" id="city">
                     </div>
                     <div class="formactionbuttons">
                         <input type="submit" value="Submit">
@@ -39,8 +39,12 @@
                             <th>EMP code</th>
                             <th>Salary</th>
                             <th>City</th>
+                            <th></th>
                         </tr>
                     </thead>
+                    <tbody>
+
+                    </tbody>
                 </table>
             </td>
         </table>
