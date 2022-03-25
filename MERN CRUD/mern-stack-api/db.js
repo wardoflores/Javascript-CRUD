@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-mongoose.connect('mongoidb://localhost:27017/postManagerDB',
+mongoose.connect('mongodb://localhost:27017/postManagerDB',
 err => {
     if(!err)
         console.log("MongoDB succeeded.")
