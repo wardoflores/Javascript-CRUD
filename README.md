@@ -17,4 +17,6 @@ Repository for Javascript Projects.
 npm packages:
 
 - Express.js
-- 
+- Mongoose
+- body-parser
+- cors
