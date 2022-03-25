@@ -6,8 +6,15 @@ Repository for Javascript Projects.
 
 ## List of Projects
 
-### CRUD website
+### CRUD using pure Javascript
 
 - <https://www.youtube.com/watch?v=-rNQeJi3Wp4&t=207s>
 
-### Incomplete
+### MERN CRUD website
+
+- <https://youtube.com/watch?v=HuXBuXf52vA>
+
+npm packages:
+
+- Express.js
+- 
