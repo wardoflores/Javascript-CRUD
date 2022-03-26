@@ -21,3 +21,5 @@ npm packages:
 - body-parser
 - cors
 - nodemon (Installed globally, doesn't work when installed locally)
+
+TODO: Comment all code to record the process and related code.
