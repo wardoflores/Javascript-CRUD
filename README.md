@@ -20,3 +20,4 @@ npm packages:
 - Mongoose
 - body-parser
 - cors
+- nodemon (Installed globally, doesn't work when installed locally)
