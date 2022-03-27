@@ -23,3 +23,8 @@ npm packages:
 - nodemon (Installed globally, doesn't work when installed locally)
 
 TODO: Comment all code to record the process and related code.
+
+Applications used for Developing:
+
+- MongoDB compass (For Mongo Index GUI)
+- postman (For RESTful API application)
