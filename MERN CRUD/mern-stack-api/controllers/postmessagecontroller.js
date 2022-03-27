@@ -6,8 +6,8 @@ var ObjectID = require('mongoose').Types.ObjectID
 
 var { postmessage } = require("../models/postmessage")
 
-router.get('/',(req,res)=>{ // model constructor that routes to gGETet document referred by postmessage.
-    postmessage.find((err,docs)=>{
+router.get('/:id',(req,res) => { // model constructor that routes to GET document referred by postmessage.
+    postmessage.find((err,docs) => {
         if(!err) res.send(docs)
         else console.log("Error while retrieving all records : "+JSON.stringify(err,undefined,2))
     })
@@ -35,7 +35,7 @@ router.put('/:id',(req,res)=>{ // model constructor that routes to PUT document 
         message: req.body.message
     }
 
-    postmessage.findByIdAndUpdate(req.params.id,{$set:updatedrecord},(err,docs)=>{
+    postmessage.findByIdAndUpdate(req.params.id,{$set:updatedrecord}, {new:true}, (err,docs) => {
         if(!err) res.send(docs)
         else console.log("Error while updating a records : "+JSON.stringify(err,undefined,2))
     })
@@ -51,6 +51,5 @@ router.delete('/:id',(req,res)=>{ // model constructor that routes to DELETE doc
         else console.log("Error while deleting a records : "+JSON.stringify(err,undefined,2))
     })
 })
-
 
 module.exports = router
