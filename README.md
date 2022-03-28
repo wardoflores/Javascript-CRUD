@@ -16,11 +16,12 @@ Repository for Javascript Projects.
 
 npm packages:
 
-- Express.js
-- Mongoose
-- body-parser
-- cors
+- Express.js (for router)
+- Mongoose (For MongoDB)
+- body-parser (For JSON)
+- cors ()
 - nodemon (Installed globally, doesn't work when installed locally)
+- create-react-app (for `npx create-react-app mern-stack-client`)
 
 TODO: Comment all code to record the process and related code.
 
