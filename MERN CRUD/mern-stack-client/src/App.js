@@ -1,10 +1,10 @@
-import React from "react";
+// import React from "react";
 import './App.css';
 import postmessages from "./components/postmessages";
 
 function App() {
   return (
-    <postmessages />
+    postmessages
   );
 }
 
