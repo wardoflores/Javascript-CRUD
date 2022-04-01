@@ -1,4 +1,4 @@
-// postmessages component needs to have a capital first letter.
+// postmessages component needs to have a capital first letter. [1]
 
 import React from "react";
 import { connect } from "react-redux";

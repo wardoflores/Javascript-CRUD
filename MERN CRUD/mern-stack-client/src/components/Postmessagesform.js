@@ -1,4 +1,4 @@
-// Postmessages component needs to have a capital first letter.
+// Postmessages component needs to have a capital first letter. [2]
 
 import React from "react";
 

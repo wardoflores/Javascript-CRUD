@@ -1,7 +1,12 @@
-// import React from "react";
+// Responsible for the default view of the application
+// Displays the retrieve and render all of the Records we insterted when doing HTTP request using postman.
+
+import React from "react";
 import './App.css';
 import Postmessages from "./components/Postmessages";
-import { Provider } from "react-redux";
+
+// Refers to `store.js`
+import { Provider } from "react-redux"; 
 import { store } from "./actions/store"
 
 function App() {

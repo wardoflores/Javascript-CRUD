@@ -1,6 +1,6 @@
-const mongoose = require("mongoose")
-
 // Index created on MongoDB. It's subfolders are the collections specified on postmessage.js
+
+const mongoose = require("mongoose")
 
 mongoose.connect('mongodb://localhost:27017/postManagerDB',
 err => {

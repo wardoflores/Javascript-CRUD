@@ -1,4 +1,4 @@
-// Action creators module.
+// Action for retrieving all records. [4]
 
 import api from "./api.js";
 
@@ -9,7 +9,7 @@ export const ACTION_TYPES ={
     FETCH_ALL: 'FETCH_ALL'
 }
 
-export const fetchall = () => dispatch => {
+export const fetchall = () => dispatch => { // exports fetchall command towards all modules.
     api.Postmessage().fetchAll()
     .then(res => {
         dispatch({
