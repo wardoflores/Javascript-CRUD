@@ -7,6 +7,7 @@ import { reducers } from "../reducers";
 export const store = createStore( // First parameter is the reducers, second is the middleware.
     reducers, // refers `index.js`
     compose(
-        applyMiddleware(thunk)
+        applyMiddleware(thunk),
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )
 )
