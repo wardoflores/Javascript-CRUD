@@ -32,11 +32,14 @@ Applications used for Developing:
 - MongoDB compass (For Mongo Index GUI)
 - postman (For RESTful API application)
 
-reminder for mongoDB: run `mongosh` at `./MERN CRUD/` to connect to the database.
+To start servers:
 
+reminder for mongoDB: run `nodemon index.js` at `./MERN CRUD/mern-stack-api` to connect to the database.
 reminder for react: run `npm start` at `./MERN CRUD/mern-stack-client`to run react server again.
-reminder for react: All components that refer to postmessages must have a capital first letter.
 
+Code structure:
+
+reminder for react: All components that refer to postmessages must have a capital first letter.
 reminder for processes: Comment all code to record the process and related code.
 
 redux notes:

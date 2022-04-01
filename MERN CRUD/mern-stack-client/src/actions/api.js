@@ -1,4 +1,4 @@
-// Module to make a HTTP request. [7]
+// Module to make a HTTP request. Using axios API and not postman [7]
 
 import axios from "axios";
 import Postmessages from "../components/Postmessages";
