@@ -37,4 +37,5 @@ reminder: Comment all code to record the process and related code.
 redux notes
 
 redux store = storing data insidde credits to state
-redux action (redux-thunk) = defining an operation which is to be done on the data that we have saved on the products store program
+redux action (redux-thunk) = defining an operation which is to be done on the data that we have saved on the products store program.
+redux reducer = update the action dispatched and outputs it into redux store.
