@@ -11,12 +11,12 @@ export const ACTION_TYPES ={
 
 export const fetchall = () => dispatch => { // exports fetchall command towards all modules.
     api.Postmessage().fetchAll()
-    .then(res => {
+    .then(res => { // If the statement above is called, then:
         dispatch({
-            type:ACTION_TYPES.FETCH_ALL,
+            type:ACTION_TYPES.FETCH_ALL, // `fetchall: () => axios.get(url),`
             payload: res.data
     }) 
     })
-    .catch(err => console.log())
+    .catch(err => console.log()) // Error catching
     
 }
