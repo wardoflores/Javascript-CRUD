@@ -29,3 +29,5 @@ Applications used for Developing:
 
 - MongoDB compass (For Mongo Index GUI)
 - postman (For RESTful API application)
+
+reminder: `npm start` to run react server again
