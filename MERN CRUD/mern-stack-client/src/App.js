@@ -1,13 +1,13 @@
 // import React from "react";
 import './App.css';
-import postmessages from "./components/postmessages";
+import Postmessages from "./components/Postmessages";
 import { Provider } from "react-redux";
 import { store } from "./actions/store"
 
 function App() {
   return (
     <Provider store={store}>
-      <postmessages/>
+      <Postmessages />
     </Provider>
   );
 }

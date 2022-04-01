@@ -24,17 +24,22 @@ npm packages:
 - create-react-app (for `npx create-react-app mern-stack-client`)
 - redux (for redirects (independent app for state-management inclined applications))
 - react-redux (for displaying the redux store into the component/UI)
-- redux-thunk
+- redux-thunk (for actions)
+- axios (for making http requests at `mern-stack-client/src/actions/api.js`)
 
 Applications used for Developing:
 
 - MongoDB compass (For Mongo Index GUI)
 - postman (For RESTful API application)
 
-reminder: `npm start` to run react server again
-reminder: Comment all code to record the process and related code.
+reminder for mongoDB: run `mongosh` at `./MERN CRUD/` to connect to the database.
 
-redux notes
+reminder for react: run `npm start` at `./MERN CRUD/mern-stack-client`to run react server again.
+reminder for react: All components that refer to postmessages must have a capital first letter.
+
+reminder for processes: Comment all code to record the process and related code.
+
+redux notes:
 
 redux store = storing data insidde credits to state
 redux action (redux-thunk) = defining an operation which is to be done on the data that we have saved on the products store program.

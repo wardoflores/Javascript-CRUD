@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { postmessage } from "./postmessages";
+import { Postmessage } from "./Postmessages";
 
 export const reducers = combineReducers({
-    postmessage
+    Postmessage
 })

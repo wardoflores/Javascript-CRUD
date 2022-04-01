@@ -1,9 +1,11 @@
-import { ACTION_TYPES } from "../actions/postmessage";
+// Reducer/fetch operation
+
+import { ACTION_TYPES } from "../actions/Postmessages";
 
 const initialstate = {
     list:[]
 }
-export const postmessage = (state=initialstate, action) => {
+export const Postmessage = (state=initialstate, action) => {
     switch (action.type) {
         case ACTION_TYPES.FETCH_ALL:
             return {
