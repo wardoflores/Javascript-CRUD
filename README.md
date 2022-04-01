@@ -39,6 +39,8 @@ reminder for react: run `npm start` at `./MERN CRUD/mern-stack-client`to run rea
 
 Code structure:
 
+Uses React hooks instead of class components.
+
 reminder for react: All components that refer to postmessages must have a capital first letter.
 reminder for processes: Comment all code to record the process and related code.
 
