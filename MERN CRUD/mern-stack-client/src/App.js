@@ -4,6 +4,7 @@
 import React from "react";
 import './App.css';
 import Postmessages from "./components/Postmessages";
+import { Container, Typography, AppBar } from "@material-ui/core";
 
 // Refers to `store.js`
 import { Provider } from "react-redux"; 
@@ -12,7 +13,14 @@ import { store } from "./actions/store"
 function App() {
   return (
     <Provider store={store}>
-      <Postmessages />
+      <Container maxWidth="lg">
+        <AppBar position="static" color="inherit">
+          <Typography variant="h2" align="center">
+            Post Box
+          </Typography>
+        </AppBar>
+        <Postmessages />
+      </Container>
     </Provider>
   );
 }

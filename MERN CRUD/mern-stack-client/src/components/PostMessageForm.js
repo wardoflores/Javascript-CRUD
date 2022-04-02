@@ -1,0 +1,121 @@
+// Postmessages component needs to have a capital first letter. [2]
+
+import { TextField, withStyles, Button,  } from "@material-ui/core";
+import React, { useEffect, useState } from "react";
+import useForm from "./useForm";
+import { connect } from "react-redux";
+import * as actions from "../actions/Postmessages";
+
+const initialFieldValues = {
+    title:'',
+    message:''
+}
+
+const styles = theme => ({
+    root: {
+        '& .MuiTextField-root': {
+            margin: theme.spacing(1),
+        },
+    },
+    form: {
+        display:'flex',
+        flexwrap:'wrap',
+        justifyContent:'enter'
+    }
+})
+
+
+
+const PostMessageForm = ({classes,...props}) => {
+
+    useEffect(() => {
+        if (props.currentId != 0){
+            
+            setValues({
+                ...props.Postmessagelist.find(x => x._id == props.currentId)
+            })
+            
+            setErrors({})
+    
+        }
+    }, [props.currentId])
+
+    const validate = () => {
+        let temp = {...errors}
+        temp.title = values.title?"":"This field is required"
+        temp.message = values.message?"":"This field is required"
+        setErrors({
+            ...temp
+        })
+        return Object.values(temp).every(x => x == "")
+
+    }
+    
+    var {
+        values,
+        setValues,
+        errors,
+        setErrors,
+        handleInputChange,
+        resetForm
+    } = useForm(initialFieldValues, props.setCurrentId)
+
+    const handlesubmit = e => {
+        
+        e.preventDefault()
+        const onSuccess = () => { 
+            window.alert('Submitted successfully.')
+        
+            resetForm()
+        
+        }
+
+        if (validate()) {
+
+            if (props.currentId == 0)
+                props.createpostmessages(values, onSuccess)
+            else
+                props.updatepostmessages(props.currentId,values,onSuccess)
+        }
+    }
+
+    return ( 
+        <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`}>
+            
+            <TextField name="title" 
+            variant="outlined" 
+            label="Title" 
+            fullWidth
+            onChange={handleInputChange}
+            {...(errors.title && {error:true,helperTExt:errors.title})}
+            value={values.title}></TextField>
+            
+            <TextField name="message" 
+            variant="outlined" 
+            label="message" 
+            fullWidth
+            multiline
+            rows={4}
+            onChange={handleInputChange} 
+            {...(errors.title && {error:true,helperTExt:errors.message})}
+            value={values.message}></TextField>
+            
+            <Button variant="outlined" 
+            color="primary" 
+            size="large" 
+            type="submit">Submit</Button>
+        
+        </form>
+    );
+}
+
+const mapstatetoprops = state => ({
+    Postmessagelist : state.Postmessage.list // State the List of the Reducer
+})
+
+const mapactiontoprops = {
+    createpostmessages : actions.create,
+    updatepostmessages : actions.update
+}
+
+export default connect(mapstatetoprops, mapactiontoprops)(withStyles(styles)(PostMessageForm));
