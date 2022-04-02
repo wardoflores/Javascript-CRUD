@@ -1,8 +1,8 @@
-// referred by `store/js` for the reducers [6]
+// referred by `store.js` for the reducers [6]
 
 import { combineReducers } from "redux";
-import { Postmessage } from "./Postmessages";
+import { postMessage } from "./postMessage";
 
 export const reducers = combineReducers({
-    Postmessage
+    postMessage
 })

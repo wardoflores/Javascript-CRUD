@@ -3,7 +3,7 @@
 
 import React from "react";
 import './App.css';
-import Postmessages from "./components/Postmessages";
+import PostMessages from "./components/PostMessages";
 import { Container, Typography, AppBar } from "@material-ui/core";
 
 // Refers to `store.js`
@@ -19,7 +19,7 @@ function App() {
             Post Box
           </Typography>
         </AppBar>
-        <Postmessages />
+        <PostMessages />
       </Container>
     </Provider>
   );

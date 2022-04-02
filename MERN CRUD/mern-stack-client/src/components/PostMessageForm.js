@@ -1,12 +1,13 @@
 // Postmessages component needs to have a capital first letter. [2]
 
+import React, { useEffect } from "react";
 import { TextField, withStyles, Button,  } from "@material-ui/core";
-import React, { useEffect, useState } from "react";
 import useForm from "./useForm";
 import { connect } from "react-redux";
-import * as actions from "../actions/Postmessages";
+import * as actions from "../actions/postMessage";
 
 const initialFieldValues = {
+    
     title:'',
     message:''
 }
@@ -24,15 +25,13 @@ const styles = theme => ({
     }
 })
 
-
-
 const PostMessageForm = ({classes,...props}) => {
 
     useEffect(() => {
-        if (props.currentId != 0){
+        if (props.currentId !== 0){
             
             setValues({
-                ...props.Postmessagelist.find(x => x._id == props.currentId)
+                ...props.postMessageList.find(x => x._id === props.currentId)
             })
             
             setErrors({})
@@ -41,13 +40,13 @@ const PostMessageForm = ({classes,...props}) => {
     }, [props.currentId])
 
     const validate = () => {
-        let temp = {...errors}
-        temp.title = values.title?"":"This field is required"
-        temp.message = values.message?"":"This field is required"
+        let temp = { ...errors }
+        temp.title = values.title ? "" : "This field is required"
+        temp.message = values.message ? "" : "This field is required"
         setErrors({
             ...temp
         })
-        return Object.values(temp).every(x => x == "")
+        return Object.values(temp).every(x => x === "")
 
     }
     
@@ -72,7 +71,7 @@ const PostMessageForm = ({classes,...props}) => {
 
         if (validate()) {
 
-            if (props.currentId == 0)
+            if (props.currentId === 0)
                 props.createpostmessages(values, onSuccess)
             else
                 props.updatepostmessages(props.currentId,values,onSuccess)
@@ -110,7 +109,7 @@ const PostMessageForm = ({classes,...props}) => {
 }
 
 const mapstatetoprops = state => ({
-    Postmessagelist : state.Postmessage.list // State the List of the Reducer
+    postMessageList : state.postMessage.list // State the List of the Reducer
 })
 
 const mapactiontoprops = {

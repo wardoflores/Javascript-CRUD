@@ -1,15 +1,14 @@
 // Module to make a HTTP request. Using axios API and not postman [7]
 
 import axios from "axios";
-import Postmessages from "../components/Postmessages";
 
-const databaseurl = 'http://localhost:4000'
+const databaseurl = 'http://localhost:4000/'
 
 export default {
-    Postmessage(url=databaseurl+'Postmessages/')
+    postMessage(url=databaseurl+'Postmessages/')
     {
         return {
-            fetchall: () => axios.get(url),
+            fetchAll: () => axios.get(url),
             fetchbyid: id => axios.get(url+id),
             create: newrecord => axios.post(url, newrecord),
             update: (id, updatedrecord) => axios.put(url + id, updatedrecord),
