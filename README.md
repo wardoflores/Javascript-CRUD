@@ -35,25 +35,4 @@ npm packages:
 - @material-ui/icons (for react UI)
 - butter-toast (Notification UI) (not installable, skipped.)
 
-Applications used for Developing:
-
-- MongoDB compass (For Mongo Index GUI)
-- postman (For RESTful API application)
-
-To start servers:
-
-reminder for mongoDB: run `nodemon index.js` at `./MERN CRUD/mern-stack-api` to connect to the database.
-reminder for react: run `npm start` at `./MERN CRUD/mern-stack-client`to run react server again.
-
-Code structure:
-
-Uses React hooks instead of class components.
-
-reminder for react: All components that refer to postmessages must have a capital first letter.
-reminder for processes: Comment all code to record the process and related code.
-
-redux notes:
-
-redux store = storing data insidde credits to state
-redux action (redux-thunk) = defining an operation which is to be done on the data that we have saved on the products store program.
-redux reducer = update the action dispatched and outputs it into redux store.
+### Web app maybe?
