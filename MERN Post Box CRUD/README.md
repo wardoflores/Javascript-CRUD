@@ -1,10 +1,12 @@
 # Post Box MERN CRUD
 
-- 
-- 
-- <https://youtube.com/watch?v=HuXBuXf52vA>
+- A Post Box displaying an input form and the Post Box where each card contains 2 values: title, and message.
+- [CodAffection Source Code](<https://github.com/CodAffection/MERN-Stack-CRUD>)
+- [CodAffection YT walkthrough](<https://youtube.com/watch?v=HuXBuXf52vA>)
 
-## npm packages
+## Set-up
+
+### npm packages
 
 `mern-stack-api`
 
@@ -23,8 +25,12 @@
 - axios (for making http requests at `mern-stack-client/src/actions/api.js`)
 - @material-ui/core (for react UI)
 - @material-ui/icons (for react UI)
-- butter-toast (Notification UI) (not installable, skipped.)
+- ~~butter-toast (Notification UI)~~ (not installable, skipped.)
+
+## Initialization
+
+
 
 ## Modifications different from the Tutorial
 
-- Lorem
+- Added a database icon as the favicon.
