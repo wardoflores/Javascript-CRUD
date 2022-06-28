@@ -1,38 +1,22 @@
 # Javascript-Projects
 
 Repository for Javascript Projects.
+Read more about the projects at the `README.md` file inside the project folder.
 
 ## Usage
 
 ## List of Projects
 
-### CRUD using pure Javascript
+### Javascript CRUD Employee List
 
-- <https://www.youtube.com/watch?v=-rNQeJi3Wp4&t=207s>
+- An employee database taking 4 values: Full Name, EMP code, Salary, and City.
+- [CodAddection YT walkthrough](<https://www.youtube.com/watch?v=-rNQeJi3Wp4>)
+- [Tutorial Source Code](<https://github.com/CodAffection/Pure-JavaScript-CRUD-Operations-with-Html>)
 
-### MERN CRUD website
+### MERN CRUD Post Box
 
 - <https://youtube.com/watch?v=HuXBuXf52vA>
 
-npm packages:
+### Dynamic Website
 
-`mern-stack-api`
-
-- Express.js (for router)
-- Mongoose (For MongoDB)
-- body-parser (For JSON)
-- cors ()
-- nodemon (Installed globally, doesn't work when installed locally)
-
-`mern-stack-client`
-
-- create-react-app (for `npx create-react-app mern-stack-client`)
-- redux (for redirects (independent app for state-management inclined applications))
-- react-redux (for displaying the redux store into the component/UI)
-- redux-thunk (for actions)
-- axios (for making http requests at `mern-stack-client/src/actions/api.js`)
-- @material-ui/core (for react UI)
-- @material-ui/icons (for react UI)
-- butter-toast (Notification UI) (not installable, skipped.)
-
-### Web app maybe?
+- <https://exmaple.com>

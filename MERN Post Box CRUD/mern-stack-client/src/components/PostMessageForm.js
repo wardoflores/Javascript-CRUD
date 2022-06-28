@@ -81,14 +81,16 @@ const PostMessageForm = ({classes,...props}) => {
     return ( 
         <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`}>
             
-            <TextField fullWidth name="title" 
+            <TextField fullWidth
+            name="title" 
             variant="outlined" 
             label="Title" 
             onChange={handleInputChange}
             {...(errors.title && {error:true,helperTExt:errors.title})}
             value={values.title}></TextField>
             
-            <TextField fullWidth multiline name="message" 
+            <TextField fullWidth multiline
+            name="message" 
             variant="outlined" 
             label="message"
             rows={10}

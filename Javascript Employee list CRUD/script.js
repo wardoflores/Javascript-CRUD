@@ -1,80 +1,79 @@
-var selectedrow = null // made global for Update Operation on onformsubmit function
+var selectedRow = null
 
-function onformsubmit() {
-    if(validate()) {
-        var formdata = readformdata();
-        if(selectedrow == null)
-            insertnewrecord(formdata);
-            else
-            updaterecord(formdata);
-        resetform();
+function onFormSubmit() {
+    if (validate()) {
+        var formData = readFormData();
+        if (selectedRow == null)
+            insertNewRecord(formData);
+        else
+            updateRecord(formData);
+        resetForm();
     }
 }
 
-function readformdata() {
-    var formdata = {};
-    formdata["fullname"] = document.getElementById("fullname").value;
-    formdata["empcode"] = document.getElementById("empcode").value;
-    formdata["salary"] = document.getElementById("salary").value;
-    formdata["city"] = document.getElementById("city").value;
-    return formdata;
+function readFormData() {
+    var formData = {};
+    formData["fullName"] = document.getElementById("fullName").value;
+    formData["empCode"] = document.getElementById("empCode").value;
+    formData["salary"] = document.getElementById("salary").value;
+    formData["city"] = document.getElementById("city").value;
+    return formData;
 }
 
-function insertnewrecord(data) {
-    var table = document.getElementById("employeelist").getElementsByTagName("tbody")[0];
-    var newrow = table.insertRow(table.length);
-    cell1 = newrow.insertCell(0);
-    cell1.innerHTML = data.fullname;
-    cell2 = newrow.insertCell(1);
-    cell2.innerHTML = data.empcode;
-    cell3 = newrow.insertCell(2);
+function insertNewRecord(data) {
+    var table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.length);
+    cell1 = newRow.insertCell(0);
+    cell1.innerHTML = data.fullName;
+    cell2 = newRow.insertCell(1);
+    cell2.innerHTML = data.empCode;
+    cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.salary;
-    cell4 = newrow.insertCell(3);
+    cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.city;
-    cell5 = newrow.insertCell(4);
-    cell5.innerHTML = `<a onClick="onedit(this)">Edit</a>
-                        <a onClick="ondelete(this)">Delete</a>`;
+    cell4 = newRow.insertCell(4);
+    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+                       <a onClick="onDelete(this)">Delete</a>`;
 }
 
-function resetform() {
-    document.getElementById("fullname").value = "";
-    document.getElementById("empcode").value = "";
+function resetForm() {
+    document.getElementById("fullName").value = "";
+    document.getElementById("empCode").value = "";
     document.getElementById("salary").value = "";
     document.getElementById("city").value = "";
-    selectedrow = null;
+    selectedRow = null;
 }
 
-function onedit(td) {
-    selectedrow = td.parentElement.parentElement;
-    document.getElementById("fullname").value = selectedrow.cells[0].innerHTML;
-    document.getElementById("empcode").value = selectedrow.cells[1].innerHTML;
-    document.getElementById("salary").value = selectedrow.cells[2].innerHTML;
-    document.getElementById("city").value = selectedrow.cells[3].innerHTML;
+function onEdit(td) {
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById("fullName").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("empCode").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("salary").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("city").value = selectedRow.cells[3].innerHTML;
+}
+function updateRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.fullName;
+    selectedRow.cells[1].innerHTML = formData.empCode;
+    selectedRow.cells[2].innerHTML = formData.salary;
+    selectedRow.cells[3].innerHTML = formData.city;
 }
 
-function updaterecord(formdata) {
-    selectedrow.cells[0].innerHTML = formdata.fullname;
-    selectedrow.cells[1].innerHTML = formdata.empcode;
-    selectedrow.cells[2].innerHTML = formdata.salary;
-    selectedrow.cells[3].innerHTML = formdata.city;
-}
-
-function ondelete(td) {
-    if (confirm("Are you sure to delete this record?")) {
+function onDelete(td) {
+    if (confirm('Are you sure to delete this record ?')) {
         row = td.parentElement.parentElement;
-        document.getElementById("employeelist").deleteRow(row.rowIndex);
-        resetform();
+        document.getElementById("employeeList").deleteRow(row.rowIndex);
+        resetForm();
     }
 }
-
 function validate() {
-    isvalid = true;
-    if (document.getElementById("fullname").value == "") {
-        isvalid = false;
-        document.getElementById("fullnamevalidationerror").classList.remove("hide");
+    isValid = true;
+    if (document.getElementById("fullName").value == "") {
+        isValid = false;
+        document.getElementById("fullNameValidationError").classList.remove("hide");
     } else {
-        isvalid = true;
-        if (!document.getElementById("fullnamevalidationerror").classList.contains("hide"))
-        document.getElementById("fullnamevalidationerror").classList.add("hide");
+        isValid = true;
+        if (!document.getElementById("fullNameValidationError").classList.contains("hide"))
+            document.getElementById("fullNameValidationError").classList.add("hide");
     }
+    return isValid;
 }

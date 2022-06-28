@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            HTml CRUD with Pure javascript
-        </title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <table>
+
+<head>
+    <title>
+        Employee List Javascript CRUD
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <table>
+        <tr>
             <td>
-                <form onsubmit="event.preventDefault();onformsubmit();" autocomplete="off"> <!--Form for CRUD operations-->
+                <!--Form for CRUD operations-->
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                     <div>
-                        <label>Full Name*</label><label class="validation-error hide" id="fullnamevalidationerror">This field is required.</label>
-                        <input type="text" name="fullname" id="fullname">
+                        <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
                     </div>
-                    <div>   
-                        <label>EMP code</label>
-                        <input type="text" name="empcode" id="empcode">
+                    <div>
+                        <label>EMP Code</label>
+                        <input type="text" name="empCode" id="empCode">
                     </div>
                     <div>
                         <label>Salary</label>
@@ -26,17 +37,18 @@
                         <label>City</label>
                         <input type="text" name="city" id="city">
                     </div>
-                    <div class="formactionbuttons">
+                    <div  class="form-action-buttons">
                         <input type="submit" value="Submit">
                     </div>
                 </form>
             </td>
             <td>
-                <table class="list" id="employeelist"> <!--Table to list all records-->
+                <!--Table to list all records-->
+                <table class="list" id="employeeList">
                     <thead>
                         <tr>
                             <th>Full Name</th>
-                            <th>EMP code</th>
+                            <th>EMP Code</th>
                             <th>Salary</th>
                             <th>City</th>
                             <th></th>
@@ -47,7 +59,9 @@
                     </tbody>
                 </table>
             </td>
-        </table>
-        <script src="script.js"></script>
-    </body>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
 </html>
