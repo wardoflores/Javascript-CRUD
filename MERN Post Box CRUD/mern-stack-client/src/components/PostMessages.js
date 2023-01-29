@@ -1,6 +1,6 @@
 // postmessages component needs to have a capital first letter. [1]
 
-import React,{ useEffect, useState, Fragment } from "react"; // useEffect, useState for declaring the fetchAll function.
+import { useState, Fragment } from "react"; // useEffect, useState for declaring the fetchAll function.
 import { connect } from "react-redux";
 import * as actions from "../actions/postMessage";
 import { Grid, List, ListItem, ListItemText, Paper, Typography, withStyles, Button, Divider } from "@material-ui/core";

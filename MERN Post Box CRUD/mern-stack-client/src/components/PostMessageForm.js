@@ -1,6 +1,6 @@
 // Postmessages component needs to have a capital first letter. [2]
 
-import React, { useEffect } from "react";
+import React, { useEffect, setErrors, setValues, postMessageList } from "react";
 import { TextField, withStyles, Button,  } from "@material-ui/core";
 import useForm from "./useForm";
 import { connect } from "react-redux";
@@ -59,24 +59,24 @@ const PostMessageForm = ({classes,...props}) => {
         resetForm
     } = useForm(initialFieldValues, props.setCurrentId)
 
-    const handlesubmit = e => {
+    // const handlesubmit = e => {
         
-        e.preventDefault()
-        const onSuccess = () => { 
-            window.alert('Submitted successfully.')
+    //     e.preventDefault()
+    //     const onSuccess = () => { 
+    //         window.alert('Submitted successfully.')
         
-            resetForm()
+    //         resetForm()
         
-        }
+    //     }
 
-        if (validate()) {
+    //     if (validate()) {
 
-            if (props.currentId === 0)
-                props.createpostmessages(values, onSuccess)
-            else
-                props.updatepostmessages(props.currentId,values,onSuccess)
-        }
-    }
+    //         if (props.currentId === 0)
+    //             props.createpostmessages(values, onSuccess)
+    //         else
+    //             props.updatepostmessages(props.currentId,values,onSuccess)
+    //     }
+    // }
 
     return ( 
         <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`}>
