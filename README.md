@@ -15,6 +15,8 @@ Read more about the projects at the `README.md` file inside the project folder.
 
 ### MERN CRUD Post Box
 
+<https://www.wardo-mern.netlify.app>
+
 - <https://youtube.com/watch?v=HuXBuXf52vA>
 
 ### Dynamic Website
